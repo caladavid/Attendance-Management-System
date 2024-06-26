@@ -2,7 +2,7 @@
     <div class="card">
         <div class="card-header">
             <h4 class="d-flex justify-content-between py-2">Empleados
-                <a class="btn btn-primary" href="{{ route("admin.users.create")}}">Agregar departamento</a>
+                <a class="btn btn-primary" href="{{ route("admin.users.create")}}">Agregar empleado</a>
             </h4>
             <input wire:model.live="search" class="form-control" placeholder="Ingrese el nombre o correo de un usuario">
         </div>

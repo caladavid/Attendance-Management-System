@@ -12,6 +12,11 @@ class ReportIndex extends Component
 
     protected $paginationTheme = "bootstrap";
 
+    public function mount()
+    {
+        $this->middleware('can:admin.index');
+    }
+
     public function render()
     {
         $users = User::with(['department', 'shift', 'attendances'])->paginate();

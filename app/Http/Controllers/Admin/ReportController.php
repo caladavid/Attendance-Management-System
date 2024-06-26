@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Attendances;
 use App\Models\User;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Carbon\Carbon;
@@ -11,6 +10,7 @@ use Illuminate\Http\Request;
 
 class ReportController extends Controller
 {
+
     public function index()
     {
         $users = User::with(['department', 'shift'])->get();
@@ -19,7 +19,6 @@ class ReportController extends Controller
 
     public function downloadPDF(Request $request)
     {
-
         $request->validate([
             'start_date' => 'required|date',
             'end_date' => 'required|date|after_or_equal:start_date',

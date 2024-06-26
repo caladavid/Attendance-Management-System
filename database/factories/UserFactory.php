@@ -28,17 +28,12 @@ class UserFactory extends Factory
             'last_name' => $this->faker->lastName,
             'email' => $this->faker->unique()->safeEmail,
             'email_verified_at' => now(),
-            'password' => Hash::make('password123'), // Establece una contraseña predeterminada
+            'password' => Hash::make('password123'), 
             'phone' => $this->faker->e164PhoneNumber(),
             'joining_date' => now(),
-            'department_id' => 1, // Reemplaza 1 con el ID del departamento correspondiente
-            'shift_id' => 1, // Reemplaza 1 con el ID del turno correspondiente
+            'department_id' => 1, 
+            'shift_id' => 1,
             'remember_token' => Str::random(10),
-            /*             'name' => fake()->name(),
-            'email' => fake()->unique()->safeEmail(),
-            'email_verified_at' => now(),
-            'password' => static::$password ??= Hash::make('password'),
-            'remember_token' => Str::random(10), */
         ];
     }
 

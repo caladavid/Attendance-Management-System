@@ -15,7 +15,7 @@ Route::get('/', function () {
 
 Route::get('admin/dashboard', function () {
     return view('admin.index');
-})->middleware('can:admin.index')->middleware('can:admin.index');
+})->middleware('can:admin.index');
 
 
 Route::middleware('auth')->group(function () {
@@ -30,8 +30,8 @@ Route::middleware('auth')->group(function () {
     Route::post('/attendance/time-out', [AttendanceController::class, 'timeOut'])->name('attendance.time_out');
     Route::resource('admin/departments', DepartmentController::class)->middleware('can:admin.index')->names("admin.departments");
     Route::resource('admin/shift', ShiftController::class)->middleware('can:admin.index')->names("admin.shift");
-    Route::get('admin/report', [ReportController::class, 'index'])->middleware('can:admin.index')->name('admin.report');
-    Route::get('admin/report/download-pdf', [ReportController::class, 'downloadPDF'])->middleware('can:admin.index')->name('admin.download-pdf');
+    Route::get('admin/report', [ReportController::class, 'index'])->name('admin.report')->middleware('can:admin.index');
+    Route::get('admin/report/download-pdf', [ReportController::class, 'downloadPDF'])->name('admin.download-pdf')->middleware('can:admin.index');
 
 });
 
