@@ -29,13 +29,13 @@
 
                             <div class="form-group">
                                 <label for="start_time">Hora de Inicio</label>
-                                <input type="time" class="form-control" name="start_time" value="{{ old('start_time') }}">
+                                <input type="time" step="2" class="form-control" name="start_time" value="{{ old('start_time') }}">
                                 @error("start_time") <span class="text-danger">{{ $message }}</span> @enderror
                             </div>
 
                             <div class="form-group">
                                 <label for="end_time">Hora de Fin</label>
-                                <input type="time" class="form-control" name="end_time" value="{{ old('end_time') }}">
+                                <input type="time"  step="2"class="form-control" name="end_time" value="{{ old('end_time') }}">
                                 @error("end_time") <span class="text-danger">{{ $message }}</span> @enderror
                             </div>
 
