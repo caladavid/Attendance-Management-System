@@ -18,10 +18,10 @@ class UserIndex extends Component
         $this->resetPage();
     }
 
-    public function mount()
+/*     public function mount()
     {
         $this->middleware('can:admin.index');
-    }
+    } */
 
     public function render()
     {

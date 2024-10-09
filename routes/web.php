@@ -14,8 +14,8 @@ Route::get('/', function () {
 
 
 Route::get('admin/dashboard', function () {
-    return view('admin.index');
-})->middleware('can:admin.index');
+    return view('admin.dashboard');
+});
 
 
 Route::middleware('auth')->group(function () {

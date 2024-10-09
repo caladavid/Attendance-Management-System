@@ -12,10 +12,10 @@ class ReportIndex extends Component
 
     protected $paginationTheme = "bootstrap";
 
-    public function mount()
+/*     public function mount()
     {
         $this->middleware('can:admin.index');
-    }
+    } */
 
     public function render()
     {
