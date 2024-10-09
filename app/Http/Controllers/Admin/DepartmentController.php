@@ -53,7 +53,7 @@ class DepartmentController extends Controller
 
         $departments = Departments::findOrFail($id);
         $departments->update($request->all());
-        return back()->with('status', 'Departamento actualizado exitosamente.');
+        return redirect()->route('admin.departments.index')->with('status', 'Departamento actualizado exitosamente.');
     }
 
     /**

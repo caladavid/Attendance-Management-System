@@ -29,13 +29,13 @@
 
                             <div class="form-group">
                                 <label for="start_time">Hora de Inicio</label>
-                                <input type="time" class="form-control" name="start_time" value="{{ $shifts->start_time }}" required>
+                                <input type="time" step="2"  class="form-control" name="start_time" value="{{ $shifts->start_time }}" required>
                                 @error("start_time") <span class="text-danger">{{ $message }}</span> @enderror
                             </div>
 
                             <div class="form-group">
                                 <label for="end_time">Hora de Fin</label>
-                                <input type="time" class="form-control" name="end_time" value="{{ $shifts->end_time }}" required>
+                                <input type="time" step="2"  class="form-control" name="end_time" value="{{ $shifts->end_time }}" required>
                                 @error("end_time") <span class="text-danger">{{ $message }}</span> @enderror
                             </div>
 

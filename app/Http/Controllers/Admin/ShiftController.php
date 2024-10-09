@@ -24,8 +24,8 @@ class ShiftController extends Controller
     {
         $request->validate([
             'name' => 'required|string|max:255',
-            'start_time' => 'required|date_format:H:i',
-            'end_time' => 'required|date_format:H:i',
+            'start_time' => 'required|date_format:H:i:s',
+            'end_time' => 'required|date_format:H:i:s|before:start_time',
         ]);
 
         Shift::create($request->all());
@@ -44,13 +44,13 @@ class ShiftController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'start_time' => 'required|date_format:H:i:s',
-            'end_time' => 'required|date_format:H:i:s',
+            'end_time' => 'required|date_format:H:i:s|before:start_time',
         ]);
 
         $shifts = Shift::findOrFail($id);
         $shifts->update($request->all());
         
-        return back()->with('status', 'Turno actualizado exitosamente.');
+        return redirect()->route('admin.shift.index')->with('status', 'Turno actualizado exitosamente.');
     }
 
     public function destroy(string $id)

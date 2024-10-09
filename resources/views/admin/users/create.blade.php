@@ -57,7 +57,7 @@
                 </select>
             </div>
 
-            <div class="form-group">
+<!--             <div class="form-group">
                 <label>Roles</label>
                 <div>
                     @foreach ($roles as $role)
@@ -69,7 +69,7 @@
                     </div>
                     @endforeach
                 </div>
-            </div>
+            </div> -->
         </div>
 
 

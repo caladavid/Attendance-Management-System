@@ -85,6 +85,38 @@ class UserController extends Controller
             'password.confirmed' => 'Las contraseñas no coinciden.',
         ]);
 
+        $user = User::findOrFail($id);
+        // Actualizar los campos generales
+        $user->first_name = $request->input('first_name');
+        $user->last_name = $request->input('last_name');
+        $user->email = $request->input('email');
+        $user->phone = $request->input('phone');
+        $user->department_id = $request->input('department_id');
+        $user->shift_id = $request->input('shift_id');
+
+        // Solo actualizar la contraseña si se ha proporcionado
+        if ($request->filled('password')) {
+            $user->password = bcrypt($request->input('password'));
+        }
+
+        $user->save(); // Guarda los cambios
+
+        return redirect()->route('admin.users.index')->with('status', 'Empleado actualizado exitosamente.');
+    }
+    /*     public function update(Request $request, string $id)
+    {
+        $request->validate([
+            'first_name' => 'required|string|max:20',
+            'last_name' => 'required|string|max:20',
+            'email' => 'required|email',
+            'phone' => 'required|string|max:15',
+            'password' => 'nullable|string|min:6|confirmed',
+            'department_id' => 'required',
+            'shift_id' => 'required',
+        ], [
+            'password.confirmed' => 'Las contraseñas no coinciden.',
+        ]);
+
         $users = User::findOrFail($id);
         if ($request->filled('password')) {
             $users->password = bcrypt($request->input('password'));
@@ -92,7 +124,7 @@ class UserController extends Controller
         $users->update($request->all());
 
         return redirect()->route('admin.users.index')->with('status', 'Empleado actualizado exitosamente.');
-    }
+    } */
 
     /**
      * Remove the specified resource from storage.
@@ -110,5 +142,4 @@ class UserController extends Controller
         $user = Auth::user();
         return view('admin.users.profile', compact('user'));
     }
-
 }

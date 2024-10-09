@@ -13,11 +13,12 @@
 
             <div class="card">
                 <div class="card-header">
-                    <h4>Agregar departamento</h4>
+                    <h4>Editar departamento</h4>
                 </div>
                 <div class="card-body">
-                    <form action="{{ route("admin.departments.store") }}" method="post">
+                    <form action="{{ route("admin.departments.update", $departments->id) }}" method="post">
                         @csrf
+                        @method('PUT')
 
                         <div class="form-group">
                             <label for="name">Nombre del turno</label>
