@@ -83,7 +83,7 @@ To set up and run the Attendance Management Application, follow these steps:
    
 # Experiencing an Issue? ⚠️
 
-Did you stumble upon a bug or encounter an issue while using Astralea? Your feedback is invaluable to us! Please report any [bugs or technical glitches](https://github.com/caladavid/astralea/issues)  you encounter so we can swiftly address them and enhance your browsing experience. 
+Did you stumble upon a bug or encounter an issue while using Astralea? Your feedback is invaluable to us! Please report any [bugs or technical glitches](https://github.com/caladavid/Attendance-Management-System/issues)  you encounter so we can swiftly address them and enhance your browsing experience. 
 
 ## Get in Touch! 📩
 
@@ -91,4 +91,4 @@ We'd love to hear from you! Whether you have a question, feedback, or just want 
 
 ## Support & Contributions 🤲
 
-#### [Star this project](https://github.com/caladavid/astralea) ⭐️
+#### [Star this project](https://github.com/caladavid/Attendance-Management-System) ⭐️
