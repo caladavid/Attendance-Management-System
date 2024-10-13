@@ -2,7 +2,6 @@
 
 <p align="center">
   <a href="#"><img src="https://github.com/user-attachments/assets/31b81b5d-e07c-480d-9fb0-2ba8102b7d58"/></a>
-  <a href="#"><img src="https://github.com/user-attachments/assets/2147e2b1-e7e1-4d1c-aa0f-395521920d46"/></a>
 </p>
 
 <p align="center">
