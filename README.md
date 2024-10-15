@@ -50,7 +50,7 @@ To set up and run the Attendance Management Application, follow these steps:
 
 1. **Clone the Repository:**
    ```bash
-   git clone [repository-url]
+   git clone https://github.com/caladavid/Attendance-Management-System.git
    ```
    
 2. Navigate to the Project Directory:
